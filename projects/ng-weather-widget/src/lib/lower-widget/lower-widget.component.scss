@@ -1,0 +1,32 @@
+@import "../styles/variables/colors";
+@import "../styles/variables/breakpoints";
+@import "../styles/mixins/mixins";
+ul {
+  @include responsive($sm) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include responsive($sm) {
+      flex-direction: row;
+      padding: 0;
+    }
+    padding: 0.4rem;
+  }
+}
+
+.icon_small {
+  max-width: 70px;
+  max-height: 70px;
+  height: 70px;
+  width: 70px;
+}
+.hi-temp {
+  color: $red;
+}
+.lo-temp {
+  color: $aqua;
+}

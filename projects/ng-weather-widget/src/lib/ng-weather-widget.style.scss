@@ -1,0 +1,73 @@
+@import "./styles/placeholders/placeholders";
+@import "./styles/variables/colors";
+@import "./styles/variables/breakpoints";
+@import "./styles/mixins/mixins";
+.widget {
+  overflow: hidden;
+  background: rgb(13, 67, 166);
+  background: linear-gradient(
+    183deg,
+    rgba(13, 67, 166, 1) 17%,
+    rgba(20, 0, 91, 1) 65%
+  );
+  color: white;
+  max-width: 900px;
+  width: 632px;
+  height: 311px;
+  padding: 1rem;
+  border-radius: 1rem;
+  @include responsive($sm) {
+    width: 375px;
+    height: 634px;
+  }
+  .main-widget {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .loader {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+.upper-widget {
+  display: flex;
+  margin-bottom: 2rem;
+  .icon-col {
+    margin-right: 2rem;
+    .icon {
+      max-width: 100px;
+      height: 100px;
+    }
+  }
+  .details-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    legend {
+      font-size: medium;
+    }
+    span {
+      font-size: smaller;
+      font-weight: 300;
+      margin: 0.2rem 0 0.2rem 0;
+    }
+  }
+}
+
+.lower-widget-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  @include responsive($sm) {
+    flex-direction: column;
+  }
+  .lower-widget-item {
+    width: 100%;
+  }
+}

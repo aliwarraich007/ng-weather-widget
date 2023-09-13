@@ -1,0 +1,10 @@
+@mixin btnColor($width, $color, $txt) {
+  border: $width solid $color;
+  color: $txt;
+}
+
+@mixin responsive($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}

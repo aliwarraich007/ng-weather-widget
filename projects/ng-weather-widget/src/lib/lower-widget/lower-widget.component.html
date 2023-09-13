@@ -1,0 +1,14 @@
+<ul>
+  <li>
+    <span>{{ day | dayConversion }}</span>
+  </li>
+  <li>
+    <img [src]="iconRender(icon)" class="icon_small" />
+  </li>
+  <li>
+    <span class="hi-temp">{{ tempMax.toFixed() }} º</span>
+  </li>
+  <li>
+    <span class="lo-temp"> {{ tempMin.toFixed() }} º</span>
+  </li>
+</ul>

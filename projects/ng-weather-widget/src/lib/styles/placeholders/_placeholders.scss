@@ -1,0 +1,82 @@
+@import "../variables/colors";
+%section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+%invalid-form {
+  border: 1px solid $red;
+}
+
+%valid-form {
+  border: 1px solid $green;
+}
+
+%form-label {
+  font-weight: bold;
+  margin: 1rem 0 1rem 0;
+  font-size: smaller;
+  color: $white;
+}
+
+%form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+%form-control {
+  padding: 1rem;
+  border: 0;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  transition: all ease-in-out;
+  transition-duration: 300ms;
+  font-weight: bold;
+  &:focus {
+    outline: none;
+  }
+}
+
+%gradient-1 {
+  background: rgb(33, 7, 51);
+  background: linear-gradient(
+    90deg,
+    rgba(33, 7, 51, 1) 0%,
+    rgba(9, 45, 97, 1) 47%,
+    rgba(30, 9, 94, 1) 100%
+  );
+}
+
+%glass-1 {
+  background: rgba(255, 255, 255, 0.31);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.3px);
+  -webkit-backdrop-filter: blur(12.3px);
+}
+
+%flex-row-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%button-default {
+  padding: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+  text-transform: capitalize;
+  background-color: transparent;
+  border-radius: 0.5rem;
+}
+
+%button-default-transition {
+  cursor: pointer;
+  transition: all ease-in-out 300ms;
+  &:hover {
+    transform: scale(95%);
+  }
+}

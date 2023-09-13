@@ -11,6 +11,11 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
+    "paths": {
+      "ng-weather-widget": [
+        "dist/ng-weather-widget"
+      ]
+    },
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
@@ -19,6 +24,8 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "lib": [
       "ES2022",
       "dom"

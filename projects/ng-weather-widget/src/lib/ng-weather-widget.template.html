@@ -1,0 +1,38 @@
+<div class="widget">
+  <div class="main-widget">
+    <div *ngIf="loading" class="loader">
+      <app-loader></app-loader>
+    </div>
+    <div class="upper-widget">
+      <div class="icon-col">
+        <img
+          alt="weather-icon"
+          class="icon"
+          [src]="iconRender(this.weatherData.current.weather[0].icon)"
+        />
+      </div>
+      <div class="details-col">
+        <legend>{{ weatherData.city }}</legend>
+        <span> {{ weatherData.current.temp.toFixed() }} º C</span>
+        <span class="label-header">
+          Humidity: {{ weatherData.current.humidity }} %</span
+        >
+        <span class="label-header"> UVI: {{ weatherData.current.uvi }} </span>
+        <span>
+          Wind: {{ weatherData.current.wind_speed }} {{
+          weatherData.current.wind_deg | windConversion }} kmh
+        </span>
+      </div>
+    </div>
+    <div class="lower-widget-container">
+      <div class="lower-widget-item" *ngFor="let item of weatherData.daily">
+        <app-lower-widget
+          [icon]="item.weather[0].icon"
+          [day]="item.dt"
+          [tempMax]="item.temp.max"
+          [tempMin]="item.temp.min"
+        ></app-lower-widget>
+      </div>
+    </div>
+  </div>
+</div>
