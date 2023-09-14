@@ -7,6 +7,7 @@ import { DayConversion } from './shared/pipes/day-converter.pipe';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { WeatherInterceptor } from './@core/services/interceptors/weather.interceptor';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     NgWeatherWidget,
@@ -15,7 +16,7 @@ import { WeatherInterceptor } from './@core/services/interceptors/weather.interc
     WindConversion,
     DayConversion,
   ],
-  imports: [CommonModule, NgOptimizedImage],
+  imports: [CommonModule, NgOptimizedImage, HttpClientModule],
   exports: [NgWeatherWidget],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: WeatherInterceptor, multi: true },
