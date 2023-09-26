@@ -8,9 +8,7 @@ ng-weather-widget is a reusable Angular component that can be used in any angula
 - Animated Icons on Current weather condition
 - Rain effect if current weather is rain
 - Caching of data for three hours.
-- light weight
-- fast response
-- mobile friendly
+- Mobile friendly
 - Current weather status at top:
 
   - City with Country name
